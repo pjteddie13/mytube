@@ -1,0 +1,8 @@
+# This file was edited by Cloudbees Feature Management
+type: experiment
+flag: snakeGame.speed
+availableValues:
+  - slow
+  - normal
+  - insane
+  - fast
