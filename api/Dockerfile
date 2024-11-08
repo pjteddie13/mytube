@@ -1,4 +1,4 @@
-FROM ruby:2.7.2 as build
+FROM ruby:2.7.7 as build
 
 RUN apt-get update && apt-get -y upgrade
 RUN gem install bundler
@@ -14,7 +14,7 @@ RUN find /usr/local/bundle -iname '*.o' -exec rm {} \;
 RUN find /usr/local/bundle -iname '*.a' -exec rm {} \;
 
 # RUNTIME CONTAINER
-FROM ruby:2.7.2
+FROM ruby:2.7.7
 
 RUN apt-get update && apt-get -y upgrade
 RUN gem install bundler
